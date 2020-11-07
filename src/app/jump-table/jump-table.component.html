@@ -1,0 +1,32 @@
+<div class="container mt-2">
+  <h4>Jump Distance Table</h4>
+  <table class="table mt-4">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Runnning Start</th>
+        <th scope="col">No Runnning Start</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Long Jump</th>
+        <td class="info" id="slot 1"></td>
+        <td class="info" id="slot 2"></td>
+      </tr>
+      <tr>
+        <th scope="row">High Jump</th>
+        <td class="info" id="slot 3"></td>
+        <td class="info" id="slot 4"></td>
+      </tr>
+      <tr>
+        <th scope="row">Jump Reach</th>
+        <td class="info" id="slot 5"></td>
+        <td class="info" id="slot 6"></td>
+      </tr>
+    </tbody>
+  </table>
+  <div>*A running start requires moving at least <span id="ten" *ngIf="short===false" style="font-weight: bold;">10 ft</span><span id="five" *ngIf="short===true" style="font-weight: bold;">5 ft</span> before jumping.</div>
+  <div>*You can not jump farther then your movement would allow.</div>
+</div>
+

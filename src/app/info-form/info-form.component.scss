@@ -1,0 +1,40 @@
+.container {
+  width: auto;
+  float: left;
+  input {
+    border: solid crimson;
+    border-radius: 20px;
+    width: 25%;
+  }
+  input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  label {
+    display: inline;
+  }
+  .mr-1 {
+    width: 5%;
+  }
+  .btn {
+    border: solid;
+    background: crimson;
+    color: white;
+    border-radius: 20px;
+    font-size: 1em;
+  }
+  .btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .btn:hover {
+    cursor: default;
+    background: darkred;
+  }
+  .btn:disabled {
+    background: crimson;
+  }
+}
+
+

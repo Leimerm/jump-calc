@@ -1,0 +1,39 @@
+<div class="container mt-2 mr-4">
+  <h4>Basic Character Info</h4>
+  <h5 class="mt-4 mb-0">Character Height</h5>
+  <div style="display: flex;">
+    <input type="text" id="feet" class="form-control mt-2" placeholder="Feet (ft)" [(ngModel)]="feetHeight">
+    <input type="text" id="inch" class="form-control mt-2 ml-3" placeholder="Inches (in)" [(ngModel)]="inchHeight">
+  </div>
+  <h5 class="mt-3 mb-0">Character Ability Score</h5>
+  <div style="display: flex;">
+    <input type="text" id="strength" class="form-control mt-2" placeholder="Strength" [(ngModel)]="strengthScore">
+    <input *ngIf = "clickDex" type="text" id="dexterity" class="form-control mt-2 ml-3" placeholder="Dexterity">
+  </div>
+  <h5 class="mt-3">Other Jump Related Features</h5>
+  <div>
+    <div class="checkbox">
+      <label><input type="checkbox" id="rad1" class="mr-1" value="">Barbarian - Totem Spirit: Tiger</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" id="rad2" class="mr-1" value="">Fighter - Champion: Remarkable Athlete</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" id="rad3" class="mr-1" value=""><span class="checkmark"></span>Monk - Step of the Wind</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" (click)="showDex()" id="rad4" class="mr-1" value="">Rogue - Thief: Second Story Work</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" id="rad5" class="mr-1" value="">Spell - Jump</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" id="rad6" (click)="changeRun()" class="mr-1" value="">Feat - Athlete</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" id="rad7" class="mr-1" value="">Magic Item - Boots of Striding and Springing</label>
+    </div>
+  </div>
+  <button type="button" [disabled]="strengthScore === '' || feetHeight === '' || inchHeight === ''" (click)="calcJump()" class="btn mt-3 mb-3">Calculate Jump</button>
+  <button type="button" (click)="resetJump()" class="btn mt-3 mb-3 ml-3">Reset Jump</button>
+</div>

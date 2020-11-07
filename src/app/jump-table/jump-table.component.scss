@@ -1,0 +1,27 @@
+.container {
+  width: 55%;
+  float: left;
+  table {
+    width: 100%;
+    border-bottom: solid crimson;
+    tr {
+      border-bottom: solid crimson;
+    }
+    th {
+      border-bottom: solid crimson;
+      border-top: solid white;
+    }
+    td {
+      border-bottom: solid crimson;
+    }
+    .info {
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+}
+
+
+
+
