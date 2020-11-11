@@ -13,6 +13,7 @@ export class InfoFormComponent implements OnInit {
   inchHeight = "";
   clickDex = false;
   strengthScore = "";
+  dexterityScore = "";
   short: boolean;
 
   constructor(private dataService: DataServiceService) {
