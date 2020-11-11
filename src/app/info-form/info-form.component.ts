@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { EventEmitter } from '@angular/core';
+import { DataServiceService } from '../data-service.service';
 
 
 @Component({
@@ -12,13 +13,15 @@ export class InfoFormComponent implements OnInit {
   inchHeight = "";
   clickDex = false;
   strengthScore = "";
-  run1 = false;
-  @Input() short: boolean;
+  short: boolean;
 
-  constructor() {
+  constructor(private dataService: DataServiceService) {
   }
 
   ngOnInit(): void {
+    this.dataService.short.subscribe(value=>{
+      this.short=value
+    })
   }
 
   calcJump() {
@@ -92,7 +95,7 @@ export class InfoFormComponent implements OnInit {
   }
 
   changeRun() {
-    this.short = !this.short;
+    this.dataService.short.next(!this.short);
     console.log(this.short)
   }
 

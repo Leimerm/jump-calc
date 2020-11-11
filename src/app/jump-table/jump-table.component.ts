@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { InfoFormComponent } from 'src/app/info-form/info-form.component'
+import { DataServiceService } from '../data-service.service';
 
 
 @Component({
@@ -8,12 +9,15 @@ import { InfoFormComponent } from 'src/app/info-form/info-form.component'
   styleUrls: ['./jump-table.component.scss']
 })
 export class JumpTableComponent implements OnInit {
-  @Input() short: boolean;
+  short: boolean;
 
 
-  constructor() { }
+  constructor(private dataService: DataServiceService) { }
 
   ngOnInit(): void {
+    this.dataService.short.subscribe(value=>{
+      this.short=value
+    })
 
   }
 

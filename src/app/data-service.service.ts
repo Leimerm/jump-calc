@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataServiceService {
-  private short = new BehaviorSubject (false);
+  short = new BehaviorSubject (false);
   sharedShort = this.short.asObservable()
   constructor() { }
 }

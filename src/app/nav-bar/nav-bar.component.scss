@@ -2,8 +2,19 @@ nav {
   background-color: crimson;
   color: white;
   font-weight: bold;
-  font-size: 3vw;
+  .navbar-brand {
+    font-size: 5vh;
+  }
   img {
     width: 4vw;
   }
 }
+
+@media screen and (max-width: 450px) {
+  #die {
+    width: 10vw;
+  }
+  #title {
+    font-size: 3.5vh;
+  }
+ }

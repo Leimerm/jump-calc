@@ -2,7 +2,7 @@
   width: 55%;
   float: left;
   table {
-    width: 100%;
+    width: 90%;
     border-bottom: solid crimson;
     tr {
       border-bottom: solid crimson;
@@ -19,8 +19,13 @@
       text-align: center;
     }
   }
-
 }
+
+@media screen and (max-width: 425px) {
+  #jumpHold {
+     width: 95%;
+   }
+ }
 
 
 
